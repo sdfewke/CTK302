@@ -17,7 +17,7 @@ rect(width/2, height/2, 200, 600);
 
 // car code
 fill('blue');
-rect(0, 750, 75, 20);
+rect(x, 750, 75, 20);
 x = x + velocity;
 if (x > width) {
   x = 0;
