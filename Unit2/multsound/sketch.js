@@ -3,8 +3,8 @@ let song1, song2, song3;
 
 function preLoad() {
   song1 = loadSound("assets/jazz.mp3");
-  song2 = loadSound("assets/jazz.mp3");
-  song3 = loadSound("assets/jazz.mp3");
+//  song2 = loadSound("assets/jazz.mp3");
+//  song3 = loadSound("assets/jazz.mp3");
 
 }
 
@@ -13,10 +13,10 @@ function setup() {
 
   song1.loop();
   song1.pause();
-  song2.loop();
-  song2.pause();
-  song3.loop();
-  song3.pause();
+//  song2.loop();
+  //song2.pause();
+  //song3.loop();
+//  song3.pause();
 }
 
 function draw() {
@@ -35,7 +35,7 @@ function draw() {
       break;
 
     case 2:
-      song2.play();
+    //  song2.play();
       state = 3;
       break;
 
@@ -44,7 +44,7 @@ function draw() {
       break;
 
     case 4:
-      song3.play();
+    //  song3.play();
       state = 5;
       break;
 
@@ -58,8 +58,8 @@ function draw() {
 function mouseReleased() {
 
   song1.pause();
-  song2.pause();
-  song3.pause();
+//  song2.pause();
+//  song3.pause();
 
   state++;
   if (state > 5) state = 0;
