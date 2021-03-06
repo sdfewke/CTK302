@@ -3,8 +3,8 @@ let song1, song2, song3;
 
 function preLoad() {
   song1 = loadSound("assets/jazz.mp3");
-//  song2 = loadSound("assets/jazz.mp3");
-//  song3 = loadSound("assets/jazz.mp3");
+  song2 = loadSound("assets/jazz.mp3");
+  song3 = loadSound("assets/jazz.mp3");
 
 }
 
