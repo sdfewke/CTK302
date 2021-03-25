@@ -65,7 +65,7 @@ function draw() {
   }
 }
 
-function Player() {
+function Player() { //player movement
   this.position = createVector(width / 2, height / 2);
   this.size = 60;
   this.speed = 10;
@@ -101,7 +101,7 @@ function Player() {
   }
 }
 
-function Car() {
+function Car() { //cupcake movement
   this.accelerant = 0;
   this.color = createVector(random(255), random(255), random(255));
 
@@ -139,7 +139,7 @@ function Car() {
   }
 }
 
-function manageMovement() {
+function manageMovement() { //movement manager
   player.update();
 
   for (var i = 0; i < cars.length; i++) {
@@ -151,7 +151,7 @@ function manageMovement() {
   }
 }
 
-function buildText(textTitle, textMessage) {
+function buildText(textTitle, textMessage) { //title text
   fill("white");
   stroke("black");
   strokeWeight(5);
@@ -162,7 +162,7 @@ function buildText(textTitle, textMessage) {
   text(textMessage, width / 2, height / 2, width / 2, height / 2);
 }
 
-function startGame() {
+function startGame() { //start function
   if (!music.isPlaying()) {
 
     music.play();
