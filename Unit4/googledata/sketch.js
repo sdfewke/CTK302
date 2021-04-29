@@ -25,7 +25,7 @@ function setup() {
   p2 = loadImage("assets/waffle.png");
 
 }
-
+//fix
 // The data comes back as an array of objects
 // Each object contains all the data for one row of the sheet
 function gotData(data) {
