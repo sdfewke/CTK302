@@ -1,5 +1,10 @@
 var bubbles = [];
 let p1,p2;
+let music;
+
+function preload() {
+  music = loadSound("assets/bacon.mp3");
+}
 
 function setup() {
 
@@ -24,6 +29,7 @@ function setup() {
   p1 = loadImage("assets/pancakes.png");
   p2 = loadImage("assets/waffle.png");
 
+
 }
 //fix
 // The data comes back as an array of objects
@@ -42,7 +48,8 @@ function gotData(data) {
 
 function draw() {
   background('blue');
-
+  fill('white');
+text("Click for Audio", width/2, 10);
   // // iterate through the bubbles and display the objects!
   for (let i = 0; i < bubbles.length; i++) {
     bubbles[i].display();
@@ -73,4 +80,16 @@ class Bubble {
   }
 
 
+}
+
+function mouseReleased() {
+  if (music.isPlaying()) {
+    music.pause();
+  } else {
+    music.loop();
+  }
+}
+
+function touchStarted() {
+  getAudioContext().resume();
 }
